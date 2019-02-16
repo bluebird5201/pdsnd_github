@@ -1,14 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+created project 1/15/2018 
+created readme 2/15/2018 
 
 ### Project Title
-Replace the Project Title
+bikeshare-2.py
 
 ### Description
-Describe what your project is about and what it does
+get user input to show the data analysis of three cities 
 
 ### Files used
-Include the files used
+bikeshare-2.py
+chicago.csv
+new_york.csv
+washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
