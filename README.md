@@ -6,6 +6,7 @@ created readme 2/15/2018
 bikeshare-2.py
 
 ### Description
+allow user choose from the three cities 
 get user input to show the data analysis of three cities 
 
 ### Files used
