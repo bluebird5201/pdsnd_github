@@ -17,7 +17,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city =input ('please enter the city(Chicago,New_york_city,Washington) :').title()
+    city =input ('please choose  a city (Chicago,New_york_city,Washington) :').title()
     while city not in ['Chicago','New_york_city','Washington']:
         city = input('please enter the valid value(Chicago,New_york_city,Washington) :').title()
 
