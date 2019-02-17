@@ -17,7 +17,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city =input ('please enter the city(Chicago,New_york_city,Washington) :').title()
+    city =input ('please choose  a city (Chicago,New_york_city,Washington) :').title()
     while city not in ['Chicago','New_york_city','Washington']:
         city = input('please enter the valid value(Chicago,New_york_city,Washington) :').title()
 
@@ -46,16 +46,10 @@ def get_filters():
 
 
 def load_data(city, month, day):
-    """
-    Loads data for the specified city and filters by month and day if applicable.
-
-    Args:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
-    """
+    '''
+	load data  and get month and day from the string of data 
+	and change string it to time 
+	'''
     df=pd.read_csv(CITY_DATA[city])
 
     df['Start Time']=pd.to_datetime(df['Start Time'])
@@ -92,7 +86,7 @@ def display_data_function (df):
             break
 
 def time_stats_popule_month_day(df):
-    """Displays statistics on the most frequent times of travel."""
+    
     print('The following statistice information do not filter by month and day of the week')
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
@@ -115,17 +109,12 @@ def time_stats_popule_month_day(df):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    
     print('The following statistice information filter by month and day of the week')
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    ''''# display the most common month
-    popular_month = df['month'].mode()[0]
-    print('\nthe most common month:',popular_month)
-    # display the most common day of week
-    popular_day = df['day'].mode()[0]
-    print('\nthe most common day of week :', popular_day)'''
+ 
 
     # display the most common start hour
     df['hour']  = df['Start Time'].dt.hour
@@ -192,9 +181,7 @@ def user_stats_nogender(df):
     print(user_types)
 
     # Display earliest, most recent, and most common year of birth
-    '''earliest_birth = df['Birth Year'].max()
-    most_recent_birth = df['Birth Year'].min()
-    most_common_year_birth = df['Birth Year'].mode()[0]'''
+   
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
